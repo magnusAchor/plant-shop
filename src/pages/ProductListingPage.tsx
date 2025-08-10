@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Plus, Check } from 'lucide-react';
 import { plants, getCategories, Plant } from '../data/plants';
-import { addToCart, selectIsInCart } from '../redux/cartSlice';
+import { addItem, selectIsInCart } from '../redux/cartSlice';
 import { RootState } from '../redux/store';
 
 const ProductListingPage: React.FC = () => {
@@ -15,7 +15,7 @@ const ProductListingPage: React.FC = () => {
     : plants.filter(plant => plant.category === activeCategory);
 
   const handleAddToCart = (plant: Plant) => {
-    dispatch(addToCart(plant));
+    dispatch(addItem(plant));
   };
 
   return (

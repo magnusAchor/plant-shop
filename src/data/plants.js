@@ -4,7 +4,7 @@ export const plants = [
     id: 1,
     name: "Jade Plant",
     price: 12.99,
-    thumbnail: "https://images.pexels.com/photos/6912775/pexels-photo-6912775.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop",
+    thumbnail: "https://www.shutterstock.com/image-photo/persons-hands-pruning-jade-tree-600nw-2548783141.jpg",
     category: "Succulents",
     description: "Easy-care succulent with thick, glossy leaves"
   },

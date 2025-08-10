@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { FaPlus, FaCheck } from 'react-icons/fa';
 import { plants, getCategories } from '../data/plants';
-import { addToCart, selectIsInCart } from '../redux/cartSlice';
+import { addItem, selectIsInCart } from '../redux/cartSlice';
 
 const ProductListingPage = () => {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -14,7 +14,7 @@ const ProductListingPage = () => {
     : plants.filter(plant => plant.category === activeCategory);
 
   const handleAddToCart = (plant) => {
-    dispatch(addToCart(plant));
+    dispatch(addItem(plant));
   };
 
   return (

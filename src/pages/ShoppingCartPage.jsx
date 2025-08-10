@@ -6,9 +6,9 @@ import {
   selectCartItems, 
   selectTotalItems, 
   selectTotalAmount,
-  incrementQuantity,
+  updateQuantity,
   decrementQuantity,
-  removeFromCart
+  removeItem
 } from '../redux/cartSlice';
 
 const ShoppingCartPage = () => {
@@ -18,7 +18,7 @@ const ShoppingCartPage = () => {
   const totalAmount = useSelector(selectTotalAmount);
 
   const handleIncrement = (id) => {
-    dispatch(incrementQuantity(id));
+    dispatch(updateQuantity(id));
   };
 
   const handleDecrement = (id) => {
@@ -26,7 +26,7 @@ const ShoppingCartPage = () => {
   };
 
   const handleRemove = (id) => {
-    dispatch(removeFromCart(id));
+    dispatch(removeItem(id));
   };
 
   const handleCheckout = () => {
